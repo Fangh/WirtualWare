@@ -22,7 +22,7 @@ public class CanObject : MonoBehaviour
     {
         if (other.gameObject.tag == "Floor")
         {
-            GameManager.Instance.scoreManager.score++;
+            GameManager.Instance.scoreManager.UpdateScore();
         }
         Destroy(gameObject);
     }
