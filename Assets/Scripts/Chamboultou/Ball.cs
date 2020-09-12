@@ -25,8 +25,8 @@ public class Ball : MonoBehaviour
     {
         if (other.gameObject.tag == "Floor")
         {
-            rb.velocity = Vector3.zero;
             gameObject.transform.position = respawnPoint.position;
+            rb.velocity = Vector3.zero;
         }
     }
 }

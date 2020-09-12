@@ -195,7 +195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
-  textScore: {fileID: 0}
+  textScore: {fileID: 1499381618666608805}
 --- !u!1 &1499381618666608802
 GameObject:
   m_ObjectHideFlags: 0
@@ -206,7 +206,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1499381618666608806}
   - component: {fileID: 1499381618666608807}
-  - component: {fileID: 1499381618666608803}
   - component: {fileID: 1499381618666608804}
   - component: {fileID: 1499381618666608805}
   m_Layer: 0
@@ -216,20 +215,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1499381618666608803
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1499381618666608802}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5519c9ec9c0e7843aa744846327c006, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  score: 0
-  textScore: {fileID: 1499381618666608805}
 --- !u!222 &1499381618666608804
 CanvasRenderer:
   m_ObjectHideFlags: 2
