@@ -9,8 +9,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Common.unity
     guid: a03527e0097943b469e74d57a542bf47
   - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: ca81c3b49db65ea46ba92c8195d5db4f
+  - enabled: 1
     path: Assets/Scenes/Chamboultou.unity
     guid: e5b74a584a8fcef41ab39cee3b2cbd71
+  - enabled: 1
+    path: Assets/Scenes/EatBurger.unity
+    guid: 780b6e74c25f91549a37886fcd6ee6ed
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 1320d4d05d2150049b27f5e091ff1464,
       type: 2}

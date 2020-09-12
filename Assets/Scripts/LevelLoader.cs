@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class LevelLoader : MonoBehaviour
 {
-    public void LoadLevel(Object scene)
+    public void LoadLevel(string sceneName)
     {
-        GameManager.Instance.levelManager.LoadLevel(scene.name);
+        GameManager.Instance.levelManager.LoadLevel(sceneName);
     }
 }

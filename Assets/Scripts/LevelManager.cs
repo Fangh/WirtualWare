@@ -5,18 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
-    [SerializeField] private Object firstScene;
-
-    private Scene currentScene;
+    [SerializeField] private string firstSceneName;
 
     public void Start()
     {
-        LoadLevel(firstScene.name);
+        Debug.Log("Level Manager START");
+        LoadLevel(firstSceneName);
     }
 
     public void LoadLevel(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
-        currentScene = SceneManager.GetActiveScene();
     }
+
 }
