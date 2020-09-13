@@ -599,7 +599,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: EatBurger
+          m_StringArgument: Chamboultou
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &308522053
@@ -2987,6 +2987,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: '[GAMEMANAGER]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8743852010744326874, guid: 5eddae6655f3f7d459cd9260cbaca950,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.48
       objectReference: {fileID: 0}
     - target: {fileID: 8743852010744326876, guid: 5eddae6655f3f7d459cd9260cbaca950,
         type: 3}
