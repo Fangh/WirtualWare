@@ -7,7 +7,6 @@ using UnityEngine;
 public class ScoreManager : MonoBehaviour
 {
     public int score;
-
     private TextMeshPro textScore;
 
     void Start()
@@ -18,6 +17,7 @@ public class ScoreManager : MonoBehaviour
     private void GetScoreText()
     {
         textScore = GameObject.FindGameObjectWithTag("ScoreText").GetComponent<TextMeshPro>();
+        textScore.text = "Score : " + score;
     }
 
     public void IncrementScore()

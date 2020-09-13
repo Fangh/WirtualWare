@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -12,6 +13,8 @@ public class LevelManager : MonoBehaviour
     private PlayableDirector timerCutscene;
     [SerializeField]
     private TextMeshPro goalText;
+    [SerializeField]
+    private string[] miniGameScenesName;
 
     public Action OnLevelLoaded;
 
@@ -23,30 +26,34 @@ public class LevelManager : MonoBehaviour
     private void OnSceneLoaded(Scene _sceneLoaded, LoadSceneMode arg1)
     {
         OnLevelLoaded?.Invoke();
-        try
+        if (this != null && _sceneLoaded.buildIndex != 0)
         {
-            if (_sceneLoaded.buildIndex != 0)
-            {
-                goalText.text = FindObjectOfType<Objective>().objective;
-                timerCutscene.gameObject.SetActive(true);
-                timerCutscene.transform.parent = GameObject.FindGameObjectWithTag("MainCamera").transform;
-                timerCutscene.transform.localPosition = Vector3.zero;
-                timerCutscene.Play();
-                timerCutscene.played += DisableCutscene;
-            }
+            StartCoroutine(StartCutscene());
         }
-        catch
-        {
-            Debug.LogError("You might have forgotten to put an Objective gameobject in this scene");
-        }
+    }
+
+    private IEnumerator StartCutscene()
+    {
+        yield return new WaitForEndOfFrame();
+        goalText.text = FindObjectOfType<Objective>().objective;
+        timerCutscene.gameObject.SetActive(true);
+        timerCutscene.transform.position = GameObject.FindGameObjectWithTag("MainCamera").transform.position;
+        timerCutscene.Play();
+        timerCutscene.stopped += DisableCutscene;
+
     }
 
     private void DisableCutscene(PlayableDirector _director)
     {
-        timerCutscene.transform.parent = transform;
-        timerCutscene.transform.localPosition = Vector3.zero;
         timerCutscene.gameObject.SetActive(false);
         timerCutscene.played -= DisableCutscene;
+        Invoke("NextLevel", 6f);
+    }
+
+    private void NextLevel()
+    {
+        string nextSceneName = miniGameScenesName[UnityEngine.Random.Range(0, miniGameScenesName.Length)];
+        LoadLevel(nextSceneName);
     }
 
     public void LoadLevel(string sceneName)

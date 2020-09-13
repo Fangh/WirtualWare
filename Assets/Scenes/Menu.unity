@@ -2983,6 +2983,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8178170138345870058, guid: 5eddae6655f3f7d459cd9260cbaca950,
+        type: 3}
+      propertyPath: miniGameScenesName.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8178170138345870058, guid: 5eddae6655f3f7d459cd9260cbaca950,
+        type: 3}
+      propertyPath: miniGameScenesName.Array.data[0]
+      value: Chamboultou
+      objectReference: {fileID: 0}
+    - target: {fileID: 8178170138345870058, guid: 5eddae6655f3f7d459cd9260cbaca950,
+        type: 3}
+      propertyPath: miniGameScenesName.Array.data[1]
+      value: EatBurger
+      objectReference: {fileID: 0}
     - target: {fileID: 8178170138345870059, guid: 5eddae6655f3f7d459cd9260cbaca950,
         type: 3}
       propertyPath: m_Name
