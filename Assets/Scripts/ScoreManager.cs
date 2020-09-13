@@ -7,8 +7,8 @@ using UnityEngine;
 public class ScoreManager : MonoBehaviour
 {
     public int score;
-    public TextMeshPro textScore;
-    // Start is called before the first frame update
+
+    private TextMeshPro textScore;
 
     void Start()
     {
@@ -21,16 +21,9 @@ public class ScoreManager : MonoBehaviour
         textScore = textScoreOBJ.GetComponent<TextMeshPro>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-    public void UpdateScore()
+    public void IncrementScore()
     {
         score++;
         textScore.text = "Score : " + score;
-
     }
 }
