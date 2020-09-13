@@ -164,7 +164,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.2
+  m_Radius: 0.1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &334415147
 PrefabInstance:
@@ -330,7 +330,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 624666905}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1746583327}
@@ -461,7 +461,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.01
   far clip plane: 1000
   field of view: 60
   orthographic: 0
@@ -564,7 +564,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1314653890}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1624592893}
@@ -638,7 +638,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c59b7d1b92f522342bfb0a0b56d9eb33, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -740,6 +740,12 @@ MonoBehaviour:
   rightHand: {fileID: 1314653891}
   burgerPrefab: {fileID: 9027326895520850137, guid: 202c8f2efbcac0349ba4f85e9edbb18e,
     type: 3}
+  eatSounds:
+  - {fileID: 8300000, guid: e4d6b79d0f7914f4f9f445cd1720c570, type: 3}
+  - {fileID: 8300000, guid: 76137a75028e4ee488d306db0699bc33, type: 3}
+  - {fileID: 8300000, guid: 7bc62416db3dc0946bb3cc11357ed267, type: 3}
+  - {fileID: 8300000, guid: 776d032b1dbeb3742b4a5adbb7847344, type: 3}
+  - {fileID: 8300000, guid: b5a31e74e2e719a41805e3a344a9d33c, type: 3}
 --- !u!1 &1533167907
 GameObject:
   m_ObjectHideFlags: 0

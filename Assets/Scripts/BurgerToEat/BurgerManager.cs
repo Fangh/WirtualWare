@@ -11,6 +11,7 @@ namespace BurgerToEat
         [SerializeField] private Transform leftHand;
         [SerializeField] private Transform rightHand;
         [SerializeField] private GameObject burgerPrefab;
+        [SerializeField] private AudioClip[] eatSounds;
 
         private GameObject currentBurger;
         private EHand currentHand;
@@ -34,8 +35,8 @@ namespace BurgerToEat
         public void BurgerIsFinished()
         {
             Destroy(currentBurger);
-            //GameManager.Instance.scoreManager.UpdateScore();
-            audioSource.Play();
+            GameManager.Instance.scoreManager.IncrementScore();
+            audioSource.PlayOneShot(eatSounds[Random.Range(0, eatSounds.Length)]);
             currentHand = currentHand == EHand.Right ? EHand.Left : EHand.Right;
             GenerateBurger();
         }
