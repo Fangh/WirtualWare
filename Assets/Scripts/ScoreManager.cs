@@ -12,17 +12,19 @@ public class ScoreManager : MonoBehaviour
 
     void Start()
     {
-        GameManager.Instance.levelManager.OnLevelLoaded += PositionScoreText;
+        GameManager.Instance.levelManager.OnLevelLoaded += GetScoreText;
     }
 
-    private void PositionScoreText()
+    private void GetScoreText()
     {
-        GameObject textScoreOBJ = GameObject.FindGameObjectWithTag("ScoreText");
-        textScore = textScoreOBJ.GetComponent<TextMeshPro>();
+        textScore = GameObject.FindGameObjectWithTag("ScoreText").GetComponent<TextMeshPro>();
     }
 
     public void IncrementScore()
     {
+        if (textScore == null)
+            GetScoreText();
+
         score++;
         textScore.text = "Score : " + score;
     }
